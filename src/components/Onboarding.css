@@ -1,0 +1,159 @@
+/* Genel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../assets/arkaplan.png') no-repeat center center fixed; /* Arka plan görseli */
+    background-size: cover; /* Görselin ekranı kaplamasını sağlarız */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .onboarding-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Koyu, saydam zemin */
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 80%; /* Sayfanın çoğunu kapla */
+  }
+  
+  /* Görseller ve metin */
+  .onboarding-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .onboarding-slide img {
+    width: 100%;
+    max-height: 350px; /* Görsellerin boyutlarını kontrol edelim */
+    object-fit: cover; /* Görsellerin tam ekranı kaplamasını sağlar */
+    border-radius: 12px;
+  }
+  
+  .onboarding-slide h2 {
+    font-size: 2.5rem;
+    color: #f39c12; /* Turuncu rengi */
+    margin-top: 20px;
+  }
+  
+  .onboarding-slide p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  /* Butonlar */
+  .slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .next-button, .start-button {
+    background-color: #f39c12; /* Enerjik turuncu */
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 160px;
+    height: 55px;
+    font-weight: bold;
+  }
+  
+  .next-button:hover, .start-button:hover {
+    background-color: #e67e22;
+  }
+  
+  .start-button {
+    background-color: #007bff; /* Mavi renk */
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Navigation Bar */
+  .navbar {
+    width: 100%;
+    background-color: #121212; /* Koyu arka plan */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: #f39c12; /* Turuncu renk */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #e67e22; /* Hover efekti için daha koyu turuncu */
+  }
+  
+  /* Mobile responsive tasarım */
+  @media (max-width: 768px) {
+    .onboarding-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .onboarding-slide h2 {
+      font-size: 2rem;
+    }
+  
+    .onboarding-slide p {
+      font-size: 1rem;
+    }
+  
+    .slider-buttons {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .next-button, .start-button {
+      width: 100%;
+      height: 50px;
+      font-size: 1rem;
+    }
+  }
+  
